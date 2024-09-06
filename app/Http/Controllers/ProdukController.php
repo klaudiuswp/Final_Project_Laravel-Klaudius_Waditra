@@ -127,7 +127,7 @@ class ProdukController extends Controller
         if ($produk->order()->exists()) {
             return response()->json([
                 'status' => 'Gagal',
-                'message' => 'Tidak datpat menghapus produk karena masih memiliki data order'
+                'message' => 'Tidak dapat menghapus produk karena masih memiliki data order'
             ], 400);
         }
         $produk->delete();
