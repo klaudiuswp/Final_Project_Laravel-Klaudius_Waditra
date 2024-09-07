@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->constrained('users')->onDelete('restrict')->onUpdate('cascade');
             $table->foreignIdFor(Produk::class)->constrained('produk')->onDelete('restrict')->onUpdate('cascade');
             $table->unsignedInteger('quantity');
-            $table->decimal('total_price', 8, 2);
+            $table->decimal('total_price', 10, 2);
             $table->timestamp('order_date')->useCurrent()->nullable();
             $table->timestamps();
         });
